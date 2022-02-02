@@ -1,0 +1,43 @@
+.advert-table {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 640px;
+    }
+
+    thead th {
+        padding: 20px 10px;
+        border-top: $light-border;
+        border-bottom: $light-border;
+
+        font-weight: normal;
+
+        &:first-child {
+            width: 255px;
+            text-align: left;
+        }
+    }
+
+    tbody td {
+        padding: 20px 10px;
+        border-bottom: $light-border;
+        text-align: center;
+
+        &:first-child {
+            width: 255px;
+            text-align: left;
+        }
+    }
+
+    th, td { min-width: 100px; }
+    tr {
+        transition: background-color $main_transition;
+    }
+    tr:hover {
+        background-color: #f3f3f3;;
+    }
+}

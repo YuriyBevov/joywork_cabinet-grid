@@ -1,0 +1,31 @@
+@import "fonts";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "global";
+@import "cmn";
+
+//--- plugins
+
+@import "plugins/swiper";
+
+// blocks
+@import "common/header";
+@import "common/blocks/contacts";
+@import "common/blocks/user";
+
+@import "sections/cabinet";
+
+@import "blocks/slider";
+@import "blocks/about";
+@import "blocks/info";
+@import "blocks/description";
+@import "blocks/object-card";
+@import "blocks/average";
+@import "blocks/average-table";
+@import "blocks/adds";
+@import "blocks/advert-stat";
+@import "blocks/advert-list";
+@import "blocks/advert-table";
+
+@import "common/footer";

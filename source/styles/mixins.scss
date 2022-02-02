@@ -1,0 +1,21 @@
+@mixin container() {
+    width: 100%;
+    max-width: $max-width;
+    min-width: min-width;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    @media(max-width: $desktop) {
+        padding: 0 20px;
+    }
+
+    @media(max-width: $tablet_large) {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+
+    @media(max-width: $mobile) {
+        padding: 10px;
+        padding-bottom: 0;
+    }
+}

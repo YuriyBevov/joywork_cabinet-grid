@@ -1,0 +1,21 @@
+.advert-stat {
+    &__field {
+        margin-bottom: 30px;
+
+        b {
+            display: inline-block;
+            margin-bottom: 23px;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 23px;
+
+            svg {
+                fill: $green;
+                margin-right: 18px;
+            }
+        }
+    }
+}

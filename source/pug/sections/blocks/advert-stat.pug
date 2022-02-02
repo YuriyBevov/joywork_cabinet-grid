@@ -1,0 +1,124 @@
+include ../../mixins/advert-list
+include ../../mixins/advert-table
+
+-
+  const siteList = [
+      {
+          name: 'Мини-сайт объекта недвижимости на JCat',
+          link: '#',
+          views: 9
+      },
+      {
+          name: 'БСН.ру',
+          link: '#',
+          views: 7
+      },
+      {
+          name: 'Kvmeter.ru',
+          link: '#',
+          views: 4
+      },
+      {
+          name: 'Address.com.ru',
+          link: '#',
+          views: 44
+      },
+      {
+          name: 'Esalle',
+          link: '#',
+          views: 65
+      },
+      {
+          name: 'Fotomakler.ru',
+          link: '#',
+          views: 34
+      },
+      {
+          name: 'UBU.ru',
+          link: '#',
+          views: 55
+      },
+      {
+          name: 'Sinels.ru',
+          link: '#',
+          views: 75
+      },
+      {
+          name: 'Realtymag.ru',
+          link: '#',
+          views: 345
+      },
+      {
+          name: 'Мини-сайт объекта недвижимости на JCat',
+          link: '#',
+          views: 9
+      },
+      {
+          name: 'Sinels.ru',
+          link: '#',
+          views: 75
+      },
+      {
+          name: 'Realtymag.ru',
+          link: '#',
+          views: 345
+      },
+      {
+          name: 'Мини-сайт объекта недвижимости на JCat',
+          link: '#',
+          views: 9
+      },
+  ]
+
+-
+  const data = 
+      {
+        thead: ['Площадка','Просмотров объявления','Просмотров контактов','Добавили в&nbsp;избранное','Звонков с сайта'],          name: 'Мини-сайт объекта недвижимости на JCat',
+        tbody: [
+            {
+                link: '#',
+                linkName: 'Авито',
+                stats: ['998','11','53','-']
+            },
+
+            {
+                link: '#',
+                linkName: 'ЦИАН',
+                stats: ['1634','20','-','-']
+            },
+
+            {
+                link: '#',
+                linkName: 'Яндекс.Недвижимость',
+                stats: ['164','11','-','0']
+            },
+
+            {
+                link: '#',
+                linkName: 'ДомКлик',
+                stats: ['222','-','-','2']
+            },
+        ]
+      }
+
+.advert-stat
+  .advert-stat__field
+    b.cmn__title.cmn__title--med Основные сайты
+    .advert-stat__field-info
+      svg(width="18" height="18")
+        use(xlink:href="#icon-view")
+      p.cmn__text.cmn__gray Общее количество просмотров: <span class="cmn__main">256</span>
+
+    .advert-stat__field-content
+      +advert-table(data)
+  .advert-stat__field
+    b.cmn__title.cmn__title--med Дополнительные сайты
+
+    .advert-stat__field-content
+      +advert-list(siteList)
+
+
+    
+
+
+  

@@ -1,0 +1,32 @@
+.user {
+    display: flex;
+    min-width: 200px;
+
+    @media(max-width: $tablet) {
+        flex-direction: column;
+    }
+
+    img {
+        border-radius: 50%;
+        margin-right: 20px;
+
+        @media(max-width: $tablet) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        span,
+        a {
+            margin-bottom: 12px;
+        }
+
+        a:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

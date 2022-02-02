@@ -1,0 +1,15 @@
+mixin advert-table(data)
+  .advert-table
+    table
+      thead
+        tr
+          each th in data.thead
+            th.cmn__text.cmn__text--small.cmn__gray!= th
+
+      tbody
+        each td in data.tbody
+          tr
+            td
+              a(href=td.link).cmn__text.cmn__f-semi.cmn__main.cmn__underline= td.linkName
+            each stat in td.stats
+              td.cmn__text.cmn__main= stat

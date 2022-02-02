@@ -1,0 +1,97 @@
+.cmn {
+    &__container {
+        @include container();
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 43px;
+        color: $black;
+
+        &--med {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        @media(max-width: $desktop) {
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        @media(max-width: $mobile) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 18px;
+        
+        &--small {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &--med {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &--info {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        &--info-large {
+            font-size: 28px;
+            line-height: 34px;
+
+            @media(max-width: $desktop) {
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
+    }
+
+    &__f-semi {
+        font-family: $f1_semi;
+        font-weight: 600;
+    }
+
+    &__underline {
+        text-decoration: underline;
+    }
+    
+    &__black {
+        color: $black;
+    }
+
+    &__main {
+        color: $black-300;
+    }
+
+    &__light {
+        color: $gray-900;
+    }
+
+    &__gray {
+        color: $gray;
+    }
+
+    &__extra {
+        color: $black-400;
+    }
+
+    &__positive {
+        color: $positive;
+    }
+
+    &__warning {
+        color: $warning;
+    }
+
+    &__danger {
+        color: $danger;
+    }
+}

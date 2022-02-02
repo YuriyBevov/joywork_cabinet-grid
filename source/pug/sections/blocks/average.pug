@@ -1,0 +1,23 @@
+include ../../mixins/average_table
+
+.average
+  h2.cmn__title Средние цены
+  +average_table('Среднерыночная стоимость «Квадратного метра»', averagePerSquareList)
+  +average_table('Среднерыночная стоимость «Объекта»', averagePerObjectList)
+
+  .average__recomendation
+    span.cmn__text.cmn__text--small.cmn__main.cmn__f-semi Рекомендованная цена продажи
+
+    ul
+      li
+        span.cmn__text.cmn__text--small.cmn__gray За 12 месяцев:
+        span.cmn__text.cmn__text--info.cmn__main.cmn__f-semi 300 000 000 р
+    
+      li
+        span.cmn__text.cmn__text--small.cmn__gray За 3 месяца:
+        span.cmn__text.cmn__text--info.cmn__main.cmn__f-semi 300 200 000 р
+
+      li
+        span.cmn__text.cmn__text--small.cmn__gray Сделка завтра:
+        span.cmn__text.cmn__text--info.cmn__main.cmn__f-semi 300 150 000 р
+      

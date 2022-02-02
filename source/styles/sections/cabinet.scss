@@ -1,0 +1,28 @@
+.cabinet {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__grid-sizer,
+    &__section {
+        width: calc(50% - 40px);
+        margin-bottom: 20px;
+    }
+
+    &__section {
+
+        @media(max-width: $desktop) {
+            width: 100%;
+
+            &--slider,
+            &--about {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media(max-width: $tablet_large) {
+            width: 100%;
+        }
+    }
+}

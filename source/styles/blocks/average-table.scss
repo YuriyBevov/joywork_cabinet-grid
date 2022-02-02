@@ -1,0 +1,71 @@
+.average-table {
+    &__title {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 10px;
+        padding-bottom: 5px;
+
+        @media(max-width: $mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-pricelist {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: auto;
+            
+            span {
+                width: 50%;
+                min-width: 220px;
+                margin-bottom: 5px;
+            }
+
+            @media(max-width: $mobile) {
+                flex-direction: column;
+
+                span {
+                    width: 100%;
+                }
+            }
+        }
+        
+        &:last-child {
+            margin-bottom: 30px;
+        }
+
+        border-top: $light-border;
+
+        &:last-child {
+            border-bottom: $light-border;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 14px;
+            line-height: 17px;
+
+            width: fit-content;
+            min-width: 175px;
+            text-align: center;
+
+            padding: 6px 14px;
+
+            border: 1px solid #cdced0;
+            border-radius: 2px;
+            margin-bottom: 5px;
+
+            background: linear-gradient(180deg, #fefefe 0%, #f6f6f6 100%);
+            color: #848484;
+        }
+    }
+}

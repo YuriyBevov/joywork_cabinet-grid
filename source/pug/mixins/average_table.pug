@@ -1,0 +1,14 @@
+mixin average_table(title, array)
+
+  .average-table
+    span.cmn__text.cmn__text--med.cmn__main.cmn__f-semi.average-table__title= title
+
+    .average-table__content
+      each item in array
+        .average-table__row
+          .average-table__row-pricelist
+            span.cmn__text.cmn__text--small.cmn__gray.average-table__name= item.name
+            span.cmn__text.cmn__text--small.cmn__gray.average-table__value(class=item.class)= item.value
+
+          if item.link
+            a(href="#") Объекты в сравнении

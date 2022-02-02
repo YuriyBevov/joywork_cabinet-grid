@@ -1,0 +1,21 @@
+.info {
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    &__objects-list {
+        height: fit-content;
+        max-height: 670px;
+        margin-bottom: 30px;
+
+        overflow: hidden;
+        overflow-y: auto;
+
+        border-top: $light-border;
+        border-bottom: $light-border;
+
+        li:not(:last-child) {
+            border-bottom: $light-border;
+        }
+    }
+} 

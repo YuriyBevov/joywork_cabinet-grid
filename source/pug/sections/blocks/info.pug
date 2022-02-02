@@ -1,0 +1,100 @@
+include ../../mixins/object_card
+
+-
+  const objectList = [
+    {
+      photo: './assets/img/object_1.jpg',
+      name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
+      published_at: '15 января 2022 18:34',
+      status: 'Продается',
+      id: 'ID 7540598',
+      district: 'Центральный район',
+      address: 'Санкт-Петербург, Литейный просп., 59',
+      ref: {
+        link: '#',
+        name: 'Циан'
+      },
+      area: '56',
+      livingArea: '0.0',
+      stage: 3,
+      stageCount: 5,
+      price: '12 600 000',
+      isFellInPrice: true
+    },
+
+    {
+      photo: './assets/img/object_2.jpg',
+      name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
+      published_at: '15 января 2022 18:34',
+      status: 'Продается',
+      id: 'ID 7540598',
+      district: 'Центральный район',
+      address: 'Санкт-Петербург, Литейный просп., 59',
+      ref: {
+        link: '#',
+        name: 'Еще что то длинное'
+      },
+      area: '56',
+      livingArea: '0.0',
+      stage: 3,
+      stageCount: 5,
+      price: '12 600 000',
+      isFellInPrice: false
+    },
+
+    {
+      photo: './assets/img/object_3.jpg',
+      name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
+      published_at: '15 января 2022 18:34',
+      status: 'Продается',
+      id: 'ID 7540598',
+      district: 'Центральный район',
+      address: 'Санкт-Петербург, Литейный просп., 59',
+      ref: {
+        link: '#',
+        name: 'Авито'
+      },
+      area: '56',
+      livingArea: '0.0',
+      stage: 3,
+      stageCount: 5,
+      price: '12 600 000',
+      isFellInPrice: true
+    },
+
+    {
+      photo: './assets/img/object_1.jpg',
+      name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
+      published_at: '15 января 2022 18:34',
+      status: 'Продается',
+      id: 'ID 7540598',
+      district: 'Центральный район',
+      address: 'Санкт-Петербург, Литейный просп., 59',
+      ref: {
+        link: '#',
+        name: 'Циан'
+      },
+      area: '56',
+      livingArea: '0.0',
+      stage: 3,
+      stageCount: 5,
+      price: '12 600 000',
+      isFellInPrice: true
+    },
+  ]
+
+.info
+  h2.cmn__title Похожие квартиры - конкуренты
+
+  ul.info__objects-list
+    each object in objectList
+      li
+        +object_card(object)
+  
+  //.info__adverts
+    .info__adverts-header
+      h2.cmn__title Реклама вашего объекта
+      p.cmn__text.cmn__main Мы рекламируем Ваш объект на следующих источниках, нажмите на название сайта, чтобы проверить, как выглядит ваше объявление.
+
+    .info__adverts-stat
+      include ./advert-stat

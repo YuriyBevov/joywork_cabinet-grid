@@ -1,0 +1,53 @@
+//fonts
+
+$f1_reg: 'latoregular';
+$f1_semi: 'latosemibold';
+
+// animation
+
+$main_transition: 0.3s 0.1s ease;
+
+// border
+
+$light-border: 1px solid #f3f3f3;
+
+// widths
+
+$w_xxl: 1920px;
+$w_xl: 1440px;
+$w_lg: 960px;
+$w_md: 768px;
+$w_sm: 480px;
+$w_xs: 320px;
+
+$min_width: $w_xs;
+$max-width: $w_xxl;
+
+// breakpoints
+
+$desktop_large   :  $w_xxl;
+$desktop         :  $w_xl;
+$tablet_large    :  $w_lg;
+$tablet          :  $w_md;
+$mobile          :  $w_sm;
+
+// colors
+
+$main-bg: #ffffff;
+$black: #000000;
+$black-400: #222222;
+$black-300: #333333;
+$gray: #666666;
+$gray-900: #757575;
+
+$green: #4caf50;
+$white: #ffffff;
+
+$positive: $green;
+$warning: #dbba45;
+$danger: #e3594e;
+
+// retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

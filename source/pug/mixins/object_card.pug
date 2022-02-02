@@ -1,0 +1,28 @@
+mixin object_card(object)
+  .object-card
+    img(src=object.photo alt=object.name width="220" height="182")
+
+    .object-card__container
+      .object-card__header
+        .object-card__header-top
+          span.cmn__text.cmn__text--small.cmn__gray= object.published_at
+          span.cmn__text.cmn__text--small.cmn__gray= object.status
+          span.cmn__text.cmn__text--small.cmn__gray= object.id
+        h3.cmn__text.cmn__main.cmn__f-semi= object.name
+      .object-card__content
+        .object-card__content-field
+            span.cmn__text.cmn__text--small.cmn__gray= object.district
+            span.cmn__text.cmn__text--small.cmn__main= object.address
+            span.cmn__text.cmn__text--small.cmn__gray Ссылка на источник:
+              a(href= object.ref.link).cmn__text.cmn__text--small.cmn__main.cmn__underline.object-card__content-ref= object.ref.name
+
+        .object-card__content-field
+            span.cmn__text.cmn__text--small.cmn__main= object.area + ' кв.м'
+            span.cmn__text.cmn__text--small.cmn__gray= 'Жилая: ' + object.livingArea + ' кв.м'
+            span.cmn__text.cmn__text--small.cmn__main= object.stage + ' этаж из ' + object.stageCount
+
+      .object-card__footer
+        span.cmn__text.cmn__text--med(class= object.isFellInPrice ? 'cmn__danger' : 'cmn__main')= object.price + ' р.'
+
+        a(href="#").cmn__text.cmn__text--small.cmn__underline.cmn__gray На карте
+        a(href="#").cmn__text.cmn__text--small.cmn__underline.cmn__gray Описание
