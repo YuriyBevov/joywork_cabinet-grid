@@ -6,6 +6,7 @@
 
     &__header {
         display: flex;
+
         @media(max-width: $tablet_large) {
             flex-wrap: wrap;
         }
@@ -13,50 +14,57 @@
 
     &__content {
         display: flex;
+        @media(max-width: $desktop) {
+            flex-wrap: wrap;
+        }
+    }
 
-        &-left {
+    &__section {
+        margin-bottom: 30px;
+
+        &--slider,
+        &--info,
+        &--adds {
             width: 48%;
             max-width: 870px;
             margin-right: auto;
         }
 
-        &-right {
+        &--about,
+        &--description,
+        &--average {
             width: 50%;
             max-width: 930px;
             margin-right: 0;
         }
 
         @media(max-width: $desktop) {
-            flex-wrap: wrap;
+            &--description {
+                order: 1;
+            }
+            &--info {
+                order: 2;
+            }
 
-            &-left,
-            &-right {
+            &--average {
+                order: 1;
+            }
+
+            &--adds {
+                order: 2;
+            }
+
+            &--info,
+            &--adds {
                 width: 100%;
                 max-width: 100%
             }
 
-            &-left {
-                order: 2;
+            &--description,
+            &--average {
+                width: 100%;
+                max-width: 100%
             }
-
-            &-right {
-                order: 1;
-            }
-        }
-    }
-
-    &__section {
-        margin-bottom: 30px;
-        &--slider {
-            width: 48%;
-            max-width: 870px;
-            margin-right: auto;
-        }
-
-        &--about {
-            width: 50%;
-            max-width: 930px;
-            margin-right: 0;
         }
 
         @media(max-width: $tablet_large) {
