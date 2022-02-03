@@ -20,3 +20,13 @@ if(slider) {
       },
     });
 }
+const objectSlider = document.querySelectorAll('.object-card-slider');
+
+if(objectSlider) {
+  objectSlider.forEach(slider => {
+    new Swiper(slider, {
+      slidesPerView: '1',
+      spaceBetween: 10
+    });
+  })
+}

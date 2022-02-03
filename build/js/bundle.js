@@ -12259,6 +12259,30 @@ __webpack_require__.r(__webpack_exports__);
 //import report_collapse from './modules/report_collapse.js'
 //import masonry from './modules/masonry.js'
 
+let objectList = document.querySelector('.info__objects-list');
+
+console.log(objectList);
+let isObjectListScrolled = false;
+
+const onScrollRefreshObjectList = () => {
+    console.log('window scroll');
+    objectList.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+    objectList.addEventListener('scroll', onScrollHandler);
+    window.removeEventListener('scroll', onScrollRefreshObjectList);
+}
+
+const onScrollHandler = () => {
+    console.log('scroll');
+    isObjectListScrolled = true;
+    objectList.removeEventListener('scroll', onScrollHandler);
+    window.addEventListener('scroll', onScrollRefreshObjectList);
+}
+
+objectList.addEventListener('scroll', onScrollHandler);
+
 /***/ }),
 
 /***/ "./source/scripts/modules/swiper.js":
@@ -12292,6 +12316,16 @@ if(slider) {
         swiper: swiper,
       },
     });
+}
+const objectSlider = document.querySelectorAll('.object-card-slider');
+
+if(objectSlider) {
+  objectSlider.forEach(slider => {
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+      slidesPerView: '1',
+      spaceBetween: 10
+    });
+  })
 }
 
 

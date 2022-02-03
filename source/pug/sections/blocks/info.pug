@@ -3,7 +3,7 @@ include ../../mixins/object_card
 -
   const objectList = [
     {
-      photo: './assets/img/object_1.jpg',
+      photos: ['./assets/img/object_1.jpg','./assets/img/object_2.jpg','./assets/img/object_1.jpg'],
       name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
       published_at: '15 января 2022 18:34',
       status: 'Продается',
@@ -23,7 +23,7 @@ include ../../mixins/object_card
     },
 
     {
-      photo: './assets/img/object_2.jpg',
+      photos: ['./assets/img/object_1.jpg','./assets/img/object_2.jpg','./assets/img/object_1.jpg'],
       name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
       published_at: '15 января 2022 18:34',
       status: 'Продается',
@@ -43,7 +43,7 @@ include ../../mixins/object_card
     },
 
     {
-      photo: './assets/img/object_3.jpg',
+      photos: ['./assets/img/object_1.jpg','./assets/img/object_2.jpg','./assets/img/object_1.jpg'],
       name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
       published_at: '15 января 2022 18:34',
       status: 'Продается',
@@ -63,7 +63,7 @@ include ../../mixins/object_card
     },
 
     {
-      photo: './assets/img/object_1.jpg',
+      photos: ['./assets/img/object_1.jpg','./assets/img/object_2.jpg','./assets/img/object_1.jpg'],
       name: 'Комната Санкт-Петербург Литейный просп., 59 (56.0 м)',
       published_at: '15 января 2022 18:34',
       status: 'Продается',
@@ -90,11 +90,3 @@ include ../../mixins/object_card
     each object in objectList
       li
         +object_card(object)
-  
-  //.info__adverts
-    .info__adverts-header
-      h2.cmn__title Реклама вашего объекта
-      p.cmn__text.cmn__main Мы рекламируем Ваш объект на следующих источниках, нажмите на название сайта, чтобы проверить, как выглядит ваше объявление.
-
-    .info__adverts-stat
-      include ./advert-stat

@@ -1,6 +1,10 @@
 mixin object_card(object)
   .object-card
-    img(src=object.photo alt=object.name width="220" height="182")
+    .swiper-container.object-card-slider 
+      .swiper-wrapper
+        each photo in object.photos
+          .swiper-slide
+            img(src=photo alt="фото объекта")
 
     .object-card__container
       .object-card__header

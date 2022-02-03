@@ -1243,17 +1243,23 @@ button.swiper-pagination-bullet {
   @media (max-width: 400px) {
     .object-card {
       flex-direction: column; } }
-  .object-card img {
+  .object-card-slider {
+    width: 220px;
     margin-right: 20px; }
+    .object-card-slider img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%;
+      height: 100%; }
     @media (max-width: 768px) {
-      .object-card img {
+      .object-card-slider {
         position: absolute;
         top: 16px;
         left: 0;
         width: 160px;
         height: 132px; } }
     @media (max-width: 400px) {
-      .object-card img {
+      .object-card-slider {
         position: relative;
         top: 0;
         width: 100%;
