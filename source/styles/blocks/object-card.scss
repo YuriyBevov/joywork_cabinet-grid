@@ -37,6 +37,29 @@
         }
     }
 
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        display: none;
+    }
+
+    .object-card-slider-button-prev,
+    .object-card-slider-button-next {
+        width: 30px;
+        height: 30px;
+        //border-radius: 50%;
+        //border: 1px solid $white;
+        transform: translateY(50%);
+
+        background-image: url('../assets/img/slider-arr.svg');
+        background-repeat: no-repeat;
+        background-size: 10px 21px;
+        background-position: center;
+    }
+
+    .object-card-slider-button-next {
+        transform: rotate(180deg) translateY(-50%);
+    }
+
     &__container {
         display: flex;
         flex-direction: column;

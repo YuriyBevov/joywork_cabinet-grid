@@ -5,6 +5,9 @@ mixin object_card(object)
         each photo in object.photos
           .swiper-slide
             img(src=photo alt="фото объекта")
+      
+      .swiper-button-prev.object-card-slider-button-prev 
+      .swiper-button-next.object-card-slider-button-next 
 
     .object-card__container
       .object-card__header

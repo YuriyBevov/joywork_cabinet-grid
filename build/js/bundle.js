@@ -12253,35 +12253,37 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
+/* harmony import */ var _modules_observer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/observer.js */ "./source/scripts/modules/observer.js");
+/* harmony import */ var _modules_observer_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_observer_js__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
-//import report_collapse from './modules/report_collapse.js'
-//import masonry from './modules/masonry.js'
+
+
+
+/***/ }),
+
+/***/ "./source/scripts/modules/observer.js":
+/*!********************************************!*\
+  !*** ./source/scripts/modules/observer.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
 let objectList = document.querySelector('.info__objects-list');
 
-console.log(objectList);
-let isObjectListScrolled = false;
+let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if(!entry.isIntersecting) {
+            objectList.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    });
+});
 
-const onScrollRefreshObjectList = () => {
-    console.log('window scroll');
-    objectList.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
-    objectList.addEventListener('scroll', onScrollHandler);
-    window.removeEventListener('scroll', onScrollRefreshObjectList);
-}
-
-const onScrollHandler = () => {
-    console.log('scroll');
-    isObjectListScrolled = true;
-    objectList.removeEventListener('scroll', onScrollHandler);
-    window.addEventListener('scroll', onScrollRefreshObjectList);
-}
-
-objectList.addEventListener('scroll', onScrollHandler);
+observer.observe(objectList);
 
 /***/ }),
 
@@ -12305,12 +12307,19 @@ if(slider) {
       slidesPerView: 'auto',
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      spaceBetween: 10
+      spaceBetween: 10,
+
+      
     });
 
     let swiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".apartment-slider", {
       zoom: true,
       loop: true,
+      on: {
+        click: function () {
+          this.slideNext();
+        }
+      },
 
       thumbs: {
         swiper: swiper,
@@ -12323,7 +12332,19 @@ if(objectSlider) {
   objectSlider.forEach(slider => {
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       slidesPerView: '1',
-      spaceBetween: 10
+      spaceBetween: 10,
+      loop: true,
+
+      on: {
+        click: function () {
+          this.slideNext();
+        }
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   })
 }
