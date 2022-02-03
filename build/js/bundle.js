@@ -12277,6 +12277,7 @@ let objectList = document.querySelector('.info__objects-list');
 let observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if(!entry.isIntersecting) {
+            alert('observer')
             objectList.scrollTo({
                 top: 0,
                 behavior: 'smooth'
