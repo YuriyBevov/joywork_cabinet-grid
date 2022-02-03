@@ -14,14 +14,3 @@ let observer = new IntersectionObserver(function (entries) {
 });
 
 observer.observe(objectList);
-
-let infoBlock = document.querySelector('.cabinet__section--info');
-
-const onScrollHandler = () => {
-    console.log(window.innerWidth)
-    if(objectList.scrollTop + objectList.clientHeight === objectList.scrollHeight && window.innerWidth < 768) {
-       infoBlock.nextElementSibling.scrollIntoView({top: 0, behavior: 'smooth'});
-    }
-}
-
-objectList.addEventListener('scroll', onScrollHandler);
