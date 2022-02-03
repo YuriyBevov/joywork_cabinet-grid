@@ -20,7 +20,7 @@ let infoBlock = document.querySelector('.cabinet__section--info');
 const onScrollHandler = () => {
     console.log(window.innerWidth)
     if(objectList.scrollTop + objectList.clientHeight === objectList.scrollHeight && window.innerWidth < 768) {
-        setTimeout(infoBlock.nextElementSibling.scrollIntoView({top: 0, behavior: 'smooth'}),100);
+       infoBlock.nextElementSibling.scrollIntoView({top: 0, behavior: 'smooth'});
     }
 }
 
