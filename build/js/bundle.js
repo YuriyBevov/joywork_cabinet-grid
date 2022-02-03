@@ -12292,6 +12292,7 @@ let infoBlock = document.querySelector('.cabinet__section--info');
 const onScrollHandler = () => {
     if(objectList.scrollTop + objectList.clientHeight === objectList.scrollHeight) {
         infoBlock.nextElementSibling.scrollIntoView({block: "center", behavior: "smooth"});
+        alert('scroll')
     }
 }
 
