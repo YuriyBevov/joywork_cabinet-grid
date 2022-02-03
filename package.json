@@ -51,7 +51,6 @@
   },
   "homepage": "",
   "dependencies": {
-    "masonry-layout": "^4.2.2",
     "swiper": "^6.7.5"
   }
 }
