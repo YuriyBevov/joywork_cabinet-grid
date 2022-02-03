@@ -1004,37 +1004,16 @@ button.swiper-pagination-bullet {
     .cabinet__header {
       flex-wrap: wrap; } }
 
-.cabinet__content {
-  display: flex; }
-  @media (max-width: 1440px) {
-    .cabinet__content {
-      flex-wrap: wrap; } }
-
 .cabinet__section {
   margin-bottom: 30px; }
-  .cabinet__section--slider, .cabinet__section--info, .cabinet__section--adds {
+  .cabinet__section--slider {
     width: 48%;
     max-width: 870px;
     margin-right: auto; }
-  .cabinet__section--about, .cabinet__section--description, .cabinet__section--average {
+  .cabinet__section--about {
     width: 50%;
     max-width: 930px;
     margin-right: 0; }
-  @media (max-width: 1440px) {
-    .cabinet__section--description {
-      order: 1; }
-    .cabinet__section--info {
-      order: 2; }
-    .cabinet__section--average {
-      order: 1; }
-    .cabinet__section--adds {
-      order: 2; }
-    .cabinet__section--info, .cabinet__section--adds {
-      width: 100%;
-      max-width: 100%; }
-    .cabinet__section--description, .cabinet__section--average {
-      width: 100%;
-      max-width: 100%; } }
   @media (max-width: 960px) {
     .cabinet__section--slider {
       width: 100%;
