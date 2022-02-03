@@ -996,21 +996,52 @@ button.swiper-pagination-bullet {
 
 .cabinet__container {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: column; }
 
-.cabinet__grid-sizer, .cabinet__section {
-  width: calc(50% - 40px);
-  margin-bottom: 20px; }
+.cabinet__header {
+  display: flex; }
+  @media (max-width: 960px) {
+    .cabinet__header {
+      flex-wrap: wrap; } }
 
-@media (max-width: 1440px) {
-  .cabinet__section {
-    width: 100%; }
-    .cabinet__section--slider, .cabinet__section--about {
-      width: calc(50% - 40px); } }
+.cabinet__content {
+  display: flex; }
+  .cabinet__content-left {
+    width: 48%;
+    max-width: 870px;
+    margin-right: auto; }
+  .cabinet__content-right {
+    width: 50%;
+    max-width: 930px;
+    margin-right: 0; }
+  @media (max-width: 1440px) {
+    .cabinet__content {
+      flex-wrap: wrap; }
+      .cabinet__content-left, .cabinet__content-right {
+        width: 100%;
+        max-width: 100%; }
+      .cabinet__content-left {
+        order: 2; }
+      .cabinet__content-right {
+        order: 1; } }
 
-@media (max-width: 960px) {
-  .cabinet__section {
-    width: 100%; } }
+.cabinet__section {
+  margin-bottom: 30px; }
+  .cabinet__section--slider {
+    width: 48%;
+    max-width: 870px;
+    margin-right: auto; }
+  .cabinet__section--about {
+    width: 50%;
+    max-width: 930px;
+    margin-right: 0; }
+  @media (max-width: 960px) {
+    .cabinet__section--slider {
+      width: 100%;
+      max-width: 100%; }
+    .cabinet__section--about {
+      width: 100%;
+      max-width: 100%; } }
 
 .slider .apartment-slider .swiper-wrapper {
   margin-bottom: 10px;
@@ -1139,9 +1170,7 @@ button.swiper-pagination-bullet {
     overflow-y: auto; }
     @media (max-width: 768px) {
       .about__info {
-        flex-direction: column;
-        overflow: visible;
-        max-height: 100%; } }
+        flex-direction: column; } }
     .about__info-section {
       display: flex;
       flex-direction: column;
@@ -1464,10 +1493,7 @@ button.swiper-pagination-bullet {
 .advert-list {
   border-top: 1px solid #f3f3f3;
   border-bottom: 1px solid #f3f3f3;
-  height: 100%;
-  max-height: 370px;
-  overflow: hidden;
-  overflow-y: auto; }
+  height: 100%; }
   .advert-list li {
     display: flex;
     align-items: center;

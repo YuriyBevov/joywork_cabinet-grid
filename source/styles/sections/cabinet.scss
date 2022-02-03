@@ -1,28 +1,74 @@
 .cabinet {
     &__container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    &__grid-sizer,
-    &__section {
-        width: calc(50% - 40px);
-        margin-bottom: 20px;
+    &__header {
+        display: flex;
+        @media(max-width: $tablet_large) {
+            flex-wrap: wrap;
+        }
     }
 
-    &__section {
+    &__content {
+        display: flex;
+
+        &-left {
+            width: 48%;
+            max-width: 870px;
+            margin-right: auto;
+        }
+
+        &-right {
+            width: 50%;
+            max-width: 930px;
+            margin-right: 0;
+        }
 
         @media(max-width: $desktop) {
-            width: 100%;
+            flex-wrap: wrap;
 
-            &--slider,
-            &--about {
-                width: calc(50% - 40px);
+            &-left,
+            &-right {
+                width: 100%;
+                max-width: 100%
             }
+
+            &-left {
+                order: 2;
+            }
+
+            &-right {
+                order: 1;
+            }
+        }
+    }
+
+    &__section {
+        margin-bottom: 30px;
+        &--slider {
+            width: 48%;
+            max-width: 870px;
+            margin-right: auto;
+        }
+
+        &--about {
+            width: 50%;
+            max-width: 930px;
+            margin-right: 0;
         }
 
         @media(max-width: $tablet_large) {
-            width: 100%;
+            &--slider {
+                width: 100%;
+                max-width: 100%
+            }
+    
+            &--about {
+                width: 100%;
+                max-width: 100%
+            }
         }
     }
 }

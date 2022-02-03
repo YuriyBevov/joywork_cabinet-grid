@@ -6,5 +6,5 @@ masonry ?
 new Masonry( '.cabinet__container', {
   itemSelector: '.cabinet__section',
   percentPosition: true,
-  gutter: 40
+  gutter: 30
 }) : null;

@@ -135,8 +135,8 @@
 
         @media(max-width: $tablet) {
             flex-direction: column;
-            overflow: visible;
-            max-height: 100%;
+            //overflow: visible;
+            //max-height: 100%;
         }
 
         &-section {

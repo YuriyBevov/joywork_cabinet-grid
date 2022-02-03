@@ -1,18 +1,26 @@
 section.cabinet
   .cmn__container
     .cabinet__container
-      .cabinet__grid-sizer
       h1.visually-hidden Агентство недвижимости "Первое Ипотечное Агентство". Презентация объекта
-      .cabinet__section.cabinet__section--slider
-        include ./blocks/slider
-      .cabinet__section.cabinet__section--about
-        include ./blocks/about
-      .cabinet__section.cabinet__section--info
-        include ./blocks/info
-      .cabinet__section.cabinet__section--description
-        include ./blocks/description
-      .cabinet__section.cabinet__section--average
-        include ./blocks/average
-      .cabinet__section.cabinet__section--adds
-        include ./blocks/adds
+
+      .cabinet__header
+        .cabinet__section.cabinet__section--slider
+          include ./blocks/slider
+        .cabinet__section.cabinet__section--about
+          include ./blocks/about
+
+      .cabinet__content
+        .cabinet__content-left
+          .cabinet__section.cabinet__section--info
+            include ./blocks/info
+          .cabinet__section.cabinet__section--adds
+            include ./blocks/adds
+      
+        .cabinet__content-right
+          .cabinet__section.cabinet__section--description
+            include ./blocks/description
+          .cabinet__section.cabinet__section--average
+            include ./blocks/average
+      
+      
       
