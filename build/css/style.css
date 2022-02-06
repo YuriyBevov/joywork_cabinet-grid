@@ -1245,7 +1245,8 @@ button.swiper-pagination-bullet {
       flex-direction: column; } }
   .object-card-slider {
     width: 220px;
-    margin-right: 20px; }
+    margin-right: 20px;
+    height: 210px; }
     .object-card-slider img {
       -o-object-fit: cover;
          object-fit: cover;
