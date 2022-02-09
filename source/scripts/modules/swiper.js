@@ -9,18 +9,10 @@ if(slider) {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       spaceBetween: 10,
-
-      
     });
 
     let swiperThumbs = new Swiper(".apartment-slider", {
-      zoom: true,
       loop: true,
-      on: {
-        click: function () {
-          this.slideNext();
-        }
-      },
 
       thumbs: {
         swiper: swiper,
@@ -35,12 +27,6 @@ if(objectSlider) {
       slidesPerView: '1',
       spaceBetween: 10,
       loop: true,
-
-      on: {
-        click: function () {
-          this.slideNext();
-        }
-      },
 
       navigation: {
         nextEl: '.swiper-button-next',

@@ -12274,8 +12274,6 @@ __webpack_require__.r(__webpack_exports__);
 
 let objectList = document.querySelector('.info__objects-list');
 
-
-
 let observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if(!entry.isIntersecting) {
@@ -12312,18 +12310,10 @@ if(slider) {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       spaceBetween: 10,
-
-      
     });
 
     let swiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".apartment-slider", {
-      zoom: true,
       loop: true,
-      on: {
-        click: function () {
-          this.slideNext();
-        }
-      },
 
       thumbs: {
         swiper: swiper,
@@ -12338,12 +12328,6 @@ if(objectSlider) {
       slidesPerView: '1',
       spaceBetween: 10,
       loop: true,
-
-      on: {
-        click: function () {
-          this.slideNext();
-        }
-      },
 
       navigation: {
         nextEl: '.swiper-button-next',

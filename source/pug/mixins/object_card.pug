@@ -4,7 +4,8 @@ mixin object_card(object)
       .swiper-wrapper
         each photo in object.photos
           .swiper-slide
-            img(src=photo alt="фото объекта" width="220" height="200")
+            a(href=photo target="_blank") 
+              img(src=photo alt="фото объекта" width="220" height="200")
       
       .swiper-button-prev.object-card-slider-button-prev 
       .swiper-button-next.object-card-slider-button-next 

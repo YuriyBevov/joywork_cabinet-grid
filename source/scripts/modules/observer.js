@@ -1,7 +1,5 @@
 let objectList = document.querySelector('.info__objects-list');
 
-
-
 let observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if(!entry.isIntersecting) {
