@@ -1,5 +1,5 @@
-import Swiper, { Autoplay, Thumbs, Zoom} from 'swiper';
-Swiper.use([Autoplay, Thumbs, Zoom]);
+import Swiper, { Autoplay, Thumbs, Zoom, Navigation} from 'swiper';
+Swiper.use([Autoplay, Thumbs, Zoom, Navigation]);
 
 const slider = document.querySelector('.swiper-container');
 
