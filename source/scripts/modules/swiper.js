@@ -4,7 +4,7 @@ Swiper.use([Autoplay, Thumbs, Zoom, Navigation]);
 const slider = document.querySelector('.swiper-container');
 
 if(slider) {
-    let swiper = new Swiper(".apartment-slider-thumbs", {
+    let swiper = new Swiper(".apartment-slider-thumbs", { 
       slidesPerView: 'auto',
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
@@ -12,13 +12,20 @@ if(slider) {
     });
 
     let swiperThumbs = new Swiper(".apartment-slider", {
-      loop: true,
+      // loop: true,
+      spaceBetween: 10,
+
+      navigation: {
+        nextEl: '.apartment-slider-button-next',
+        prevEl: '.apartment-slider-button-prev',
+      },
 
       thumbs: {
         swiper: swiper,
       },
     });
 }
+
 const objectSlider = document.querySelectorAll('.object-card-slider');
 
 if(objectSlider) {
